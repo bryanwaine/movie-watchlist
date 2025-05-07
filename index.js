@@ -50,7 +50,7 @@ async function getMovie(page = 1) {
 
     const searchTerm = searchInputEl.value.trim().replaceAll(" ", "+");
     const response = await fetch(
-      `http://www.omdbapi.com/?s=${searchTerm}&apikey=22a26b42&page=${page}`
+      `https://www.omdbapi.com/?s=${searchTerm}&apikey=22a26b42&page=${page}`
     );
     const data = await response.json();
 
