@@ -76,7 +76,7 @@ async function getMovie(page = 1) {
 
     movieListEl.innerHTML = "";
     data.Search.forEach((movie) => {
-      fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=22a26b42`)
+      fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=22a26b42`)
         .then((response) => response.json())
         .then((data) => {
           const { Poster, Title, imdbID, imdbRating, Runtime, Genre, Plot } =
@@ -113,7 +113,7 @@ async function getMovie(page = 1) {
           document.querySelectorAll(".watchlist-btn").forEach((btn) => {
             btn.addEventListener("click", () => {
               const movieId = btn.dataset.movieId;
-              fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=22a26b42`)
+              fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=22a26b42`)
                 .then((response) => response.json())
                 .then((data) => {
                   const {
