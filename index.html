@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <header>
-        <div class="content">
+        <div class="wrapper content">
           <h1>Find Your Film</h1>
           <nav>
             <ul>
@@ -21,7 +21,7 @@
       </header>
 
       <main>
-        <div class="content">
+        <div class="wrapper">
           <div class="search-container">
             <div class="search-icon">
               <img src="images/search-icon.png" alt="search icon" />
@@ -29,8 +29,8 @@
             <input type="search" name="search" id="search" />
             <button id="search-button">Search</button>
           </div>
-          <p id="search-results"></p>
-          <div class="movies-container" id="movies-container">
+          <p id="search-results" class="search-results content"></p>
+          <div class="movies-container content" id="movies-container">
             <div id="placeholder" class="placeholder">
               <img src="images/movie-icon.png" alt="movie icon" />
               <p>Start exploring</p>

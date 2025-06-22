@@ -41,7 +41,7 @@ header {
   color: #ffffff;
 }
 
-header > .content {
+header > .wrapper {
   grid-area: content;
   display: flex;
   justify-content: space-between;
@@ -75,7 +75,7 @@ main {
   height: 571px;
 }
 
-main > .content {
+main > .wrapper {
   grid-area: content;
   display: flex;
   flex-direction: column;
