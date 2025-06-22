@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  line-height: 1.2;
 }
 
 body {
@@ -229,7 +230,6 @@ main > .content {
     font-weight: 500;
     margin: 0 0.5rem 0 0;
     width: fit-content;
-    line-height: 1.2rem;
 }
 
 .rating {
@@ -284,11 +284,6 @@ main > .content {
     height: 12px;
 }
 
-.movie-runtime,
-.movie-genre {
-  line-height: 1.2rem;
-}
-
 .bottom-info {
     width: 100%;
     font-size: .875rem;
@@ -331,6 +326,7 @@ main > .content {
 .page-number {
     color: #111827;
     font-weight: 500;
+    font-size: .75rem;
     margin: .2rem 0 0 0;
     padding: 0;
     display: flex;
@@ -367,4 +363,16 @@ main > .content {
     font-size: .75rem;
     font-weight: 400;
     margin: 2rem 0 0 0;
+}
+
+/* ----- Animations ----- */
+.content {
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: all 0.6s ease-out;
+}
+
+.content.slide-up {
+  opacity: 1;
+  transform: translateY(0);
 }
