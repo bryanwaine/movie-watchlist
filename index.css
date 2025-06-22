@@ -88,6 +88,7 @@ main > .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #d1d5db;
   border-radius: 5px;
   height: 2.5rem;
   margin-top: -1.25rem;
@@ -102,8 +103,7 @@ main > .content {
   width: 10%;
   height: 100%;
   margin: 0;
-  border: 1px solid #d1d5db;
-  border-right: none;
+  border: none;
   border-radius: 5px 0 0 5px;
 }
 
@@ -116,11 +116,9 @@ main > .content {
   width: 80%;
   height: 100%;
   border: none;
-  padding: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   font-size: 0.9rem;
-  border: 1px solid #d1d5db;
-  border-right: none;
-  border-left: none;
+  border: none;
   outline: none;
   background: transparent;
   color: inherit;
@@ -134,6 +132,9 @@ main > .content {
   cursor: pointer;
   background: #f9fafb;
   border: 1px solid #d1d5db;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
   border-radius: 0 5px 5px 0;
   outline: none;
   color: inherit;
@@ -194,7 +195,6 @@ main > .content {
 
 .movie {
     width: 100%;
-    height: 195px;
     display: flex;
     align-items: center;
     pad: 1.25rem 0;
@@ -229,6 +229,7 @@ main > .content {
     font-weight: 500;
     margin: 0 0.5rem 0 0;
     width: fit-content;
+    line-height: 1.2rem;
 }
 
 .rating {
@@ -281,6 +282,11 @@ main > .content {
 .mid-info > button > img {
     width: 12px;
     height: 12px;
+}
+
+.movie-runtime,
+.movie-genre {
+  line-height: 1.2rem;
 }
 
 .bottom-info {
