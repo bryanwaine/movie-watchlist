@@ -195,196 +195,195 @@ main > .wrapper {
 }
 
 .movie {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    pad: 1.25rem 0;
-    gap: 1.5rem;
-    border-bottom: 1.5px solid #E5E7EB;
-    padding: 0 0 1rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  pad: 1.25rem 0;
+  gap: 1.5rem;
+  border-bottom: 1.5px solid #e5e7eb;
+  padding: 0 0 1rem 0;
 }
 
 .movie-img {
-    width: 99px;
-    height: 147px;
-    border-radius: 2px;
-    font-size: .75rem;
+  width: 99px;
+  height: 147px;
+  border-radius: 2px;
+  font-size: 0.75rem;
 }
 
 .movie-info {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.top-info{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.top-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .top-info > h2 {
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin: 0 0.5rem 0 0;
-    width: fit-content;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0 0.5rem 0 0;
+  width: fit-content;
 }
 
 .rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 0 0 0 0.5rem;
-    width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0 0 0.5rem;
+  width: 10%;
 }
 
 .rating > img {
-    margin: 0 0 0.2rem 0;
-    width: 12px;
-    height: 12px;
+  margin: 0 0 0.2rem 0;
+  width: 12px;
+  height: 12px;
 }
 
 .rating > p {
-    margin: 0;
-    font-size: .75rem;
+  margin: 0;
+  font-size: 0.75rem;
 }
 
 .mid-info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin: 0;
-    font-size: .75rem;
-    font-weight: 400;
-    color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #111827;
 }
 
 .mid-info > button {
-    border: none;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    font-size: inherit;
-    margin: 0 0 0.2rem 0;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  font-size: inherit;
+  margin: 0 0 0.2rem 0;
 }
 
 .mid-info > button > span {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
 }
 
 .mid-info > button > img {
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
 }
 
 .bottom-info {
-    width: 100%;
-    font-size: .875rem;
-    font-weight: 400;
-    color: #6B7280;
-    margin: 0;
-    line-height: 1.5rem;
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5rem;
 }
 
 .bottom-info > p {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination {
-    width: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 1rem 0 1.5rem 0;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem 0;
 }
 
 .pagination > button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #6B7280;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #6b7280;
 }
 
 .pagination > button:hover {
-    color: #111827;
-    font-weight: 500;
-    color: #111827;
-    font-weight: 500;
+  color: #111827;
+  font-weight: 500;
+  color: #111827;
+  font-weight: 500;
 }
 
 .page-number {
-    color: #111827;
-    font-weight: 500;
-    font-size: .75rem;
-    margin: .2rem 0 0 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
+  color: #111827;
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin: 0.2rem 0 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .page-number > p {
-    margin: 0;
-    padding: 0;
-    text-decoration: underline;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
 }
 
 .page-number :nth-child(2) {
-    color: #6B7280;
-    font-style: italic;
-    text-decoration: none;
+  color: #6b7280;
+  font-style: italic;
+  text-decoration: none;
 }
 
 .pagination > button:disabled,
 .pagination > button:disabled:hover {
-    cursor: not-allowed;
-    color: #9da7ba;
-    font-weight: 400;
+  cursor: not-allowed;
+  color: #9da7ba;
+  font-weight: 400;
 }
 
 .added-to-watchlist {
-    color: #10B981;
-    cursor: not-allowed;
+  color: #10b981;
+  cursor: not-allowed;
 }
 
 #search-results {
-    color: #6B7280;
-    font-size: .75rem;
-    font-weight: 400;
-    margin: 2rem 0 0 0;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin: 2rem 0 0 0;
 }
 
 @media screen and (max-width: 768px) {
-
-  html, body {
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container {
     width: 100%;
     height: 100%;
+    margin: 0;
   }
-    .container {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
 
-    main {
-      height: 80%;
-    }
+  main {
+    height: 80%;
+  }
 
-    header {
-      height: 20%;
-    }
-  
+  header {
+    height: 20%;
+  }
 }
 
 /* ----- Animations ----- */
