@@ -9,6 +9,7 @@ const nextBtn = document.getElementById("next-btn");
 const watchlistBtn = document.getElementById("watchlist-btn");
 
 let watchlist;
+let loading = false
 
 window.addEventListener("load", () => {
   searchInputEl.value = "";
@@ -42,12 +43,13 @@ function addedToWatchlistCheck(id) {
 }
 
 async function getMovie(page = 1) {
+  if (searchInputEl.value === "") {
+    return;
+  }
+  loading = true
+  movieListEl.innerHTML = `<div class="loader"></div>`
   try {
-    if (searchInputEl.value === "") {
-      return;
-    }
     page === 1 ? (prevBtn.disabled = true) : (prevBtn.disabled = false);
-
     const searchTerm = searchInputEl.value.trim().replaceAll(" ", "+");
     const response = await fetch(
       `https://www.omdbapi.com/?s=${searchTerm}&apikey=22a26b42&page=${page}`
@@ -55,6 +57,7 @@ async function getMovie(page = 1) {
     const data = await response.json();
 
     if (!data.Search) {
+      loading = false
       movieListEl.innerHTML = `
       <div class="placeholder" id="placeholder">
       <p>Unable to find what you’re looking for. Please try another search.</p>
@@ -62,6 +65,7 @@ async function getMovie(page = 1) {
       paginationEl.style.display = "none";
       return;
     }
+    
     document.getElementById('search-results').textContent = `${data.totalResults} results found for "${searchTerm.replaceAll("+", " ")}"`;
     if (data.totalResults > 10) {
       paginationEl.style.display = "flex";
@@ -74,7 +78,7 @@ async function getMovie(page = 1) {
       ? (nextBtn.disabled = true)
       : (nextBtn.disabled = false);
 
-    movieListEl.innerHTML = "";
+    let movieList = "";
     data.Search.forEach((movie) => {
       fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=22a26b42`)
         .then((response) => response.json())
@@ -84,7 +88,7 @@ async function getMovie(page = 1) {
 
           addedToWatchlistCheck(imdbID);
 
-            movieListEl.innerHTML += `
+            movieList += `
                           <div class="movie">
                                       <img class="movie-img" src=${Poster} alt=${Title} />
                                       <div class="movie-info">
@@ -109,7 +113,8 @@ async function getMovie(page = 1) {
                                       </div>
                                     </div>
                                     `;
-
+       
+          movieListEl.innerHTML = movieList;
           document.querySelectorAll(".watchlist-btn").forEach((btn) => {
             btn.addEventListener("click", () => {
               const movieId = btn.dataset.movieId;
@@ -153,7 +158,7 @@ async function getMovie(page = 1) {
 const callback = (entries, observer) => {
   entries.forEach(entry => {
     if(entry.isIntersecting) {
-      entry.target.classList.add('slide-up')
+      entry.target.classList.add('fade-in')
       observer.unobserve(entry.target)
     } 
   })

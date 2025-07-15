@@ -95,6 +95,7 @@ main > .wrapper {
   margin-top: -1.25rem;
   background: #ffffff;
   color: #374151;
+  z-index: 20;
 }
 
 .search-icon {
@@ -125,7 +126,7 @@ main > .wrapper {
   color: inherit;
 }
 
-.search-container > button {
+#search-button {
   width: 20%;
   height: 100%;
   border: none;
@@ -142,7 +143,7 @@ main > .wrapper {
   cursor: pointer;
 }
 
-.search-container > button:hover {
+#search-button:hover {
   background: #f3f4f6;
 }
 
@@ -365,6 +366,27 @@ main > .wrapper {
   margin: 2rem 0 0 0;
 }
 
+.loader {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #171717;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 768px) {
   html,
   body {
@@ -390,11 +412,12 @@ main > .wrapper {
 /* ----- Animations ----- */
 .content {
   opacity: 0;
-  transform: translateY(10rem);
-  transition: all 0.6s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(10px); /* optional subtle lift */
 }
 
-.content.slide-up {
+.content.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
+
